@@ -20,6 +20,7 @@ body{
 #my_slides .my_image{
     width: 500%;
     line-height: 0;
+    transition: 0.5s;
 }
 
 #my_owerflow{
@@ -84,16 +85,17 @@ label, a{
     border-color: white !important;
 }
 
+#my_active label:active{
+    background: yellow;
+    border-color: yellow !important;
+}
+
 #my_switch1:checked ~ #my_active label:nth-child(1),
 #my_switch2:checked ~ #my_active label:nth-child(2),
 #my_switch3:checked ~ #my_active label:nth-child(3),
 #my_switch4:checked ~ #my_active label:nth-child(4){
     background: transparent;
     border: 3px solid blue;
-}
-
-#my_slides .my_images{
-    transition: 1s;
 }
 
 /* работа с текстом ниже */
@@ -130,16 +132,54 @@ margin: 0 0 0 35%;
 
 #my_switch1:checked ~ #my_slides_text .line_for_text{
     margin-left: 35%;
+    transition: 1s;
 }
 
 #my_switch2:checked ~ #my_slides_text .line_for_text{
     margin-left: -65%;
+    transition: 1s;
 }
 
 #my_switch3:checked ~ #my_slides_text .line_for_text{
     margin-left: -165%;
+    transition: 1s;
 }
 
 #my_switch4:checked ~ #my_slides_text .line_for_text{
     margin-left: -265%;
+    transition: 1s;
+}
+
+@media (max-width: 380px) {
+    /* стили указанные здесь применяются, если ширина 
+    viewport меньше или равно 380px*/
+
+    article img{
+        width: 70%;
+    }
+
+    #my_active{
+        margin: 23% 0 0 0;
+    }
+    
+    .line_for_text{
+        margin: 15% 0 0 15%;
+        }
+
+        
+#my_switch1:checked ~ #my_slides_text .line_for_text{
+    margin-left: 15%;
+    }
+
+#my_switch2:checked ~ #my_slides_text .line_for_text{
+    margin-left: -85%;
+    }
+
+#my_switch3:checked ~ #my_slides_text .line_for_text{
+    margin-left: -185%;
+    }
+
+#my_switch4:checked ~ #my_slides_text .line_for_text{
+    margin-left: -285%;
+    }
 }
