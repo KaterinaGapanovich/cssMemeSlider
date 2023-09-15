@@ -3,9 +3,8 @@ body{
 }
 
 #my_slider{ /*расположение слайдера*/
-    position: relative;
     text-align: center;
-    top: 10px;
+    top: 10%;
 }
 
 #my_slider{ /* выравнивание слайдера относительно экрана*/
@@ -33,7 +32,7 @@ article img{
 }
 
 #my_desktop:checked ~ #slider{
-    max-width: 960px;
+    width: 50%;
 }
 
 label, a{
@@ -62,21 +61,21 @@ label, a{
 
 #my_controls{
     margin: -25% 0 0 0;
-    width: 100%;
-    height: 50px;
+    width: 100% auto;
+    
 }
 
 #my_active label{
-    border-radius: 10px;
+    border-radius: 1em;
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 1em;
+    height: 1em;
     background: blue;
-    border: 3px solid blue;
+    border: 0.15em solid blue;
 }
 
 #my_active{
-    margin: 23% 0 0 24%;
+    margin: 28% 0 0 23%;
     text-align: center;
 }
 
@@ -95,19 +94,19 @@ label, a{
 #my_switch3:checked ~ #my_active label:nth-child(3),
 #my_switch4:checked ~ #my_active label:nth-child(4){
     background: transparent;
-    border: 3px solid blue;
+    border: 0.15em solid blue;
 }
 
 /* работа с текстом ниже */
 
 .my_text1, .my_text2, .my_text3, .my_text4{
     color: white;
-    font-size: 20px;
+    font-size: 1.3rem;
     font-family: Calibri;
 }
 
 #my_slides_text{
-    margin-top: -30px;
+    margin-top: -2%;
 }
 
 .line_for_text{
@@ -159,14 +158,17 @@ margin: 0 0 0 35%;
     }
 
     #my_active{
-        margin: 23% 0 0 0;
+        margin: 35% 0 0 0;
     }
     
     .line_for_text{
-        margin: 15% 0 0 15%;
+        margin: 5% 0 0 15%;
+        }
+        
+        .my_text1, .my_text2, .my_text3, .my_text4{
+            font-size: 1rem;
         }
 
-        
 #my_switch1:checked ~ #my_slides_text .line_for_text{
     margin-left: 15%;
     }
