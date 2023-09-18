@@ -1,0 +1,236 @@
+body{
+    background: rgb(43, 43, 43);
+}
+
+#my_slider{ /*расположение слайдера*/
+    text-align: center;
+    top: 5%;
+}
+
+#my_slider{ /* выравнивание слайдера относительно экрана*/
+    margin: 5% auto;
+}
+
+#my_slides article{
+    width: 20%;
+    float: left;
+}
+
+#my_slides .my_image{
+    width: 500%;
+    line-height: 0;
+    transition: 0.5s;
+}
+
+#my_owerflow{
+    width: 100%;
+    overflow: hidden;
+}
+
+article img{
+    width: 37%;
+}
+
+#my_desktop:checked ~ #slider{
+    width: 50%;
+}
+
+label, a{
+    cursor: pointer;
+}
+
+.all_inputs_and_img input{
+    display: none;
+}
+
+#my_switch1:checked ~ #my_slides .my_image{
+    margin-left: 0;
+}
+
+#my_switch2:checked ~ #my_slides .my_image{
+    margin-left: -100%;
+}
+
+#my_switch3:checked ~ #my_slides .my_image{
+    margin-left: -200%;
+}
+
+#my_switch4:checked ~ #my_slides .my_image{
+    margin-left: -300%;
+}
+
+#my_controls{
+    margin: -25% 0 0 0;
+    width: 100% auto;
+    
+}
+
+#my_active label{
+    border-radius: 1em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background: blue;
+    border: 0.15em solid blue;
+}
+
+#my_active{
+    margin: 28% 0 0 27%;
+    text-align: center;
+}
+
+#my_active label:hover{
+    background: white;
+    border-color: white !important;
+}
+
+#my_active label:active{
+    background: yellow;
+    border-color: yellow !important;
+}
+
+#my_switch1:checked ~ #my_active label:nth-child(1),
+#my_switch2:checked ~ #my_active label:nth-child(2),
+#my_switch3:checked ~ #my_active label:nth-child(3),
+#my_switch4:checked ~ #my_active label:nth-child(4){
+    background: transparent;
+    border: 0.15em solid blue;
+}
+
+/* работа с текстом ниже */
+
+.my_text1, .my_text2, .my_text3, .my_text4{
+    color: white;
+    font-size: 1.15rem;
+    font-family: Calibri;
+}
+
+#my_slides_text{
+    margin-top: -3%;
+}
+
+.line_for_text{
+text-align: left;
+margin: 0 0 0 25%;
+}
+
+#my_slides_text article{
+    width: 20%;
+    float: left;
+}
+
+#my_slides_text .line_for_text{
+    width: 500%;
+    line-height: 0;
+}
+
+#my_owerflow_text{
+    width: 100%;
+    overflow: hidden;
+}
+
+#my_switch1:checked ~ #my_slides_text .line_for_text{
+    margin-left: 31.5%;
+    transition: 1s;
+}
+
+#my_switch2:checked ~ #my_slides_text .line_for_text{
+    margin-left: -68.5%;
+    transition: 1s;
+}
+
+#my_switch3:checked ~ #my_slides_text .line_for_text{
+    margin-left: -168.5%;
+    transition: 1s;
+}
+
+#my_switch4:checked ~ #my_slides_text .line_for_text{
+    margin-left: -268.5%;
+    transition: 1s;
+}
+
+@media (max-width: 1601px) {
+    .my_text1, .my_text2, .my_text3, .my_text4{
+        font-size: 1.5em;
+        transition: 1s;
+    }
+}
+
+@media (max-width: 1350px) {
+    .my_text1, .my_text2, .my_text3, .my_text4{
+        font-size: 1.2em;
+        transition: 1s;
+    }
+}
+
+@media (max-width: 1250px) {
+    .my_text1, .my_text2, .my_text3, .my_text4{
+        font-size: 1em;
+        transition: 1s;
+    }
+}
+
+@media (max-width: 921px) {
+    .my_text1, .my_text2, .my_text3, .my_text4{
+        font-size: 0.7em;
+        transition: 1s;
+    }
+}
+
+@media (max-width: 820px) {
+    .my_text1, .my_text2, .my_text3, .my_text4{
+        font-size: 0.5em;
+        letter-spacing: -0.05em;
+        transition: 1s;
+    }
+}
+
+@media (max-width: 778px) {
+    .my_text1, .my_text2, .my_text3, .my_text4{
+        letter-spacing: -0.07em;
+        transition: 1s;
+    }
+}
+
+@media (max-width: 721px) {
+    /* стили указанные здесь применяются, если ширина 
+    viewport меньше или равно 380px*/
+
+    article img{
+        width: 37%;
+        transition: 1s;
+    }
+
+    #my_active{
+        margin: 35% 0 0 0;
+    }
+    
+    .line_for_text{
+        margin: 0 0 0 32%;
+        }
+        
+        #my_slides_text{
+            margin-top: 5%;
+        }
+
+        .my_text1, .my_text2, .my_text3, .my_text4{
+            font-size: 1rem;
+            letter-spacing: 0;
+        }
+
+#my_switch1:checked ~ #my_slides_text .line_for_text{
+    margin-left: 32%;
+    }
+
+#my_switch2:checked ~ #my_slides_text .line_for_text{
+    margin-left: -68%;
+    }
+
+#my_switch3:checked ~ #my_slides_text .line_for_text{
+    margin-left: -168%;
+    }
+
+#my_switch4:checked ~ #my_slides_text .line_for_text{
+    margin-left: -268%;
+    }
+}
